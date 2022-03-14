@@ -282,6 +282,11 @@ form {
   width: 100%;
   padding: 4em 1em;
   background-color: var(--grey);
+  display: none;
+}
+
+.form-show {
+  display: block;
 }
 
 form label {

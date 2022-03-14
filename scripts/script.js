@@ -1,32 +1,98 @@
-// const apiBaseUrl = 'https://tribe.api.fdnd.nl/v1'
+const apiBase = 'smartzones.json'
+const smartzoneTable = document.querySelector('.tables');
+
+async function loadSmartzones() {
+    return (await fetch(apiBase)).json();
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    let smartzones = [];
+
+    try {
+        smartzones = await loadSmartzones()
+    } catch (error) {
+        console.log("Error")
+        console.log(error)
+    }
+
+    fillSmartzoneTable(smartzones)
+})
+
+function fillSmartzoneTable(smartzones) {
+    smartzones.map(smartzone => {
+
+        // Create a HTML table
+        smartzoneTable.insertAdjacentHTML('beforeend',
+            `
+            <table>
+            <tr>
+                <th>Naam</th>
+                <td>${smartzone.name}</td>
+            </tr>
+            <tr>
+                <th>Stad</th>
+                <td>${smartzone.town}</td>
+            </tr>
+            <tr>
+                <th>Locatie</th>
+                <td>${smartzone.location}</td>
+            </tr>
+            <tr>
+                <th>functie</th>
+                <td>${smartzone.function}</td>
+            </tr>
+            <tr>
+                <th>Tijdstip</th>
+                <td>${smartzone.time}</td>
+            </tr>
+            <tr>
+                <th>Grootte (plek)</th>
+                <td>${smartzone.size}</td>
+            </tr>
+            <tr>
+                <th>Gebruik (%)</th>
+                <td>${smartzone.usage}</td>
+            </tr>
+            <tr>
+                <th>Omschrijving</th>
+                <td>${smartzone.description}</td>
+            </tr>
+            </table>
+            <img src="https://via.placeholder.com/510.png/524dd0/fff" alt="">
+        `
+        )
+    })
+}
+
+
+// const apiBase = 'https://smartzone.api.fdnd.nl/v1'
 // const container = document.querySelector('main section div')
-// const memberForm = document.querySelector('form#memberForm')
+// const smartzoneForm = document.querySelector('form#smartzoneForm')
 
-// // Fetch quotes and authors and show them in the container
-// fetchJson(apiBaseUrl + '/member').then(parseMembers)
+// // Fetch smartzones and show them in the container
+// fetchJson(apiBase + '/smartzone').then(parseSmartzones)
 
-// // Hook up controls for the member form
-// memberForm.addEventListener('submit', (event) => {
+// // Hook up controls for the smartzone form
+// smartzoneForm.addEventListener('submit', (event) => {
 //   event.preventDefault()
 
-//   let member = {
-//     memberId: Number(memberForm.elements.memberId.value),
-//     squadId: Number(memberForm.elements.squadId.value),
-//     type: memberForm.elements.type.value,
-//     nickname: memberForm.elements.nickname.value,
-//     name: memberForm.elements.name.value,
-//     prefix: memberForm.elements.prefix.value,
-//     surname: memberForm.elements.surname.value,
-//     avatar: memberForm.elements.avatar.value,
-//     githubHandle: memberForm.elements.githubHandle.value,
-//     bio: memberForm.elements.bio.value,
-//     url: memberForm.elements.url.value,
+//   let smartzone = {
+//     smartzoneId: Number(smartzoneForm.elements.smartzoneId.value),
+//     name: smartzoneForm.elements.name.value,
+//     town: smartzoneForm.elements.town.value,
+//     location: smartzoneForm.elements.location.value,
+//     function: smartzoneForm.elements.function.value,
+//     time: smartzoneForm.elements.time.value,
+//     size: smartzoneForm.elements.size.value,
+//     usage: smartzoneForm.elements.usage.value,
+//     description: smartzoneForm.elements.description.value,
+//     image: smartzoneForm.elements.image.value,
 //   }
-//   console.log('member to be inserted:')
-//   console.log(member)
+//   console.log('smartzone to be inserted:')
+//   console.log(smartzone)
 
-//   postJson(apiBaseUrl + '/member', member).then((response) => {
-//     container.innerHTML += renderMember(response[0])
+//   postJson(apiBase + '/smartzone', smartzone).then((response) => {
+//     container.innerHTML += renderSmartzone(response[0])
 //   })
 // })
 
@@ -65,21 +131,54 @@
 // }
 
 // /**
-//  * Parses the passed data stream from the members API and renders all quotes into
+//  * Parses the passed data stream from the smartzones API and renders all quotes into
 //  * the HTML container which is defined in the main scope
-//  * @param {*} data a json object containing the members from the API
+//  * @param {*} data a json object containing the smartzones from the API
 //  */
-// function parseMembers(data) {
+// function parseSmartzones(data) {
 //   container.innerHTML = data
-//     .map((member) => renderMember(member))
+//     .map((smartzone) => renderSmartzone(smartzone))
 //     .reduce((previous, current) => previous + current)
 // }
 
 // /**
-//  * Renders a member in to HTML elements
-//  * @param {*} member the member to be rendered
+//  * Renders a smartzone in to HTML elements
+//  * @param {*} smartzone the smartzone to be rendered
 //  * @returns an HTML string containing the quote
 //  */
-// function renderMember(member) {
-//   return `<article><h3>${member.name} ${member.surname}</h3></article>`
+// function renderSmartzone(smartzone) {
+//   return `<table>
+//           <tr>
+//           <th>Naam</th>
+//           <td>${smartzone.name}</td>
+//         </tr>
+//         <tr>
+//           <th>Stad</th>
+//           <td>${smartzone.town}</td>
+//         </tr>
+//         <tr>
+//           <th>Locatie</th>
+//           <td>${smartzone.location}</td>
+//         </tr>
+//         <tr>
+//           <th>functie</th>
+//           <td>${smartzone.function}</td>
+//         </tr>
+//         <tr>
+//           <th>Tijdstip</th>
+//           <td>${smartzone.time}</td>
+//         </tr>
+//         <tr>
+//           <th>Grootte</th>
+//           <td>${smartzone.size}</td>
+//         </tr>
+//         <tr>
+//           <th>Gebruik</th>
+//           <td>${smartzone.usage}</td>
+//         </tr>
+//         <tr>
+//           <th>Omschrijving</th>
+//           <td>${smartzone.description}</td>
+//         </tr>
+//       </table>`
 // }

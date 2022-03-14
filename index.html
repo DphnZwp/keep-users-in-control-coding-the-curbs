@@ -8,118 +8,50 @@
 		<!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>CRUD Form</title>
+    <title>Coding the Curbs | The smart city of tommorow</title>
 </head>
 <body>
+  <header class="primary-header">
+		<a class="links" href="index.html">
+			<img class="logo" src="assets/CTC_Primary_Logo_Black.png" alt="logo">
+		</a>
+		<nav>
+			<ul class="primary-navigation">
+				<li>
+					<a class="links hover-color" href="index.html#smartzones">
+						Smartzones
+					</a>
+				</li>
+        <li>
+					<a class="links hover-color" href="all-smartzones.html">
+						Alle smartzones 
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
   <main>
-    <section class="smartzones">
+    <section id="smartzones">
       <h1 class="style-h2">Smartzones</h1>
-      <!-- <table>
-        <tr>
-          <th>Naam</th>
-          <th>Stad</th>
-          <th>Locatie</th>
-          <th>functie</th>
-        </tr>
-        <tr>
-          <td>Tijn</td>
-          <td>Utrecht</td>
-          <td>Twijnstraat 26</td>
-          <td>"Laden en lossen Parkeren"</td>
-        </tr>
-        <tr>
-          <th>Tijdstip</th>
-          <th>Grootte</th>
-          <th>Gebruik</th>
-          <th>Omschrijving</th>
-        </tr>
-        <tr>
-          <td>07:00 - 17:00</td>
-          <td>1,5</td>
-          <td>48</td>
-          <td>Eerste Smart Zone in Nederland</td>
-        </tr>
-      </table> -->
-      <div class="grid">
-        <table>
-          <tr>
-            <th>Naam</th>
-            <td>Tijn</td>
-          </tr>
-          <tr>
-            <th>Stad</th>
-            <td>Utrecht</td>
-          </tr>
-          <tr>
-            <th>Locatie</th>
-            <td>Twijnstraat 26</td>
-          </tr>
-          <tr>
-            <th>functie</th>
-            <td>"Laden en lossen Parkeren"</td>
-          </tr>
-          <tr>
-            <th>Tijdstip</th>
-            <td>07:00 - 17:00</td>
-          </tr>
-          <tr>
-            <th>Grootte</th>
-            <td>1,5</td>
-          </tr>
-          <tr>
-            <th>Gebruik</th>
-            <td>48</td>
-          </tr>
-          <tr>
-            <th>Omschrijving</th>
-            <td>Eerste Smart Zone in Nederland</td>
-          </tr>
-        </table>
-        <img src="https://via.placeholder.com/300.png/524dd0/fff" alt="">
-        <button class="prev-button">Vorige</button>
-				<button class="next-button">Volgende</button>
+      <p>Hier is een overzicht met smartzones. Je kan ook smartzones sorteren op functie en stad.</p>
+      <div class="sorting">
+        <select class="select-function">
+          <option>Sorteer op functie</option>
+          <option>Deelmobiliteit</option>
+        </select>
+        <select class="select-town">
+          <option>Sorteer op stad</option>
+          <option>Amsterdam</option>
+          <option>Rotterdam</option>
+          <option>Schiedam</option>
+          <option>Utrecht</option>
+        </select>
+        <button><a class="gradient-button right-arrow" href="all-smartzones.html">Alle smartzones</a></button>
+      </div>
+      <div class="tables">
       </div>
     </section>
-		<section class="crud-form">
-        <h2>Smartzones toevoegen</h1>
-			
-			<form id="memberForm" action="https://tribe.api.fdnd.nl/v1/member" method="post">
-					<label for="smartzoneId">SmartzoneId</label>
-					<input type="number" id="smartzoneId">
-	
-					<label for="name">Naam</label>
-					<input type="text" id="name">
-	
-					<label for="town">Stad</label>
-					<input type="text" id="town">
-	
-					<label for="location">Locatie</label>
-					<input type="text" id="location">
-	
-					<label for="function">Functie</label>
-					<input type="text" id="function" placeholder="Bijvoorbeeld de, het of van">
-	
-					<label for="time">Tijdstip</label>
-					<input type="text" id="time">
-	
-					<label for="size">Grootte (plek)</label>
-					<input type="text" id="size">
-	
-					<label for="usage">Gebruik (%)</label>
-					<input type="text" id="usage">
-	
-					<label for="description">Omschrijving</label>
-					<input type="text" id="description">
-	
-					<label for="image">Foto (url)</label>
-					<input type="url" placeholder="https://foto.com"
-          pattern="https://.*" id="image">
-	
-					<button type="submit">Toevoegen</button>
-					<button type="reset">Cancel</button>
-			</form>
-		</section>
   </main>
-	<script src="scripts/script.js"></script>
+	<script src="scripts/sorting.js"></script>
 </body>
 </html>

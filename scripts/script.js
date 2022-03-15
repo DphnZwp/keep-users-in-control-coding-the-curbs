@@ -1,10 +1,10 @@
 const form = document.querySelector('form')
 const toggleButtonForm = document.querySelector('.toggle-form')
-
+// Toggle form
 toggleButtonForm.addEventListener('click', () => {
     form.classList.toggle('form-show')
 });
-
+// API link
 const apiBase = 'smartzones.json'
 const smartzoneTable = document.querySelector('.tables');
 

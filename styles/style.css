@@ -275,6 +275,20 @@ img {
   box-shadow: inset 0px 0px 0px 2px var(--blue);
 }
 
+.form-white-button {
+  margin: 2em 0;
+  font-size: 1.1875rem;
+  font-weight: 500;
+  color: var(--blue);
+  width: max-content;
+  padding: 0.911em 3em;
+  background: white;
+  box-shadow: inset 0px 0px 0px 2px var(--blue);
+  border: none;
+  border-radius: 2em;
+  cursor: pointer
+}
+
 form {
   width: 100%;
   padding: 4em 1em;
@@ -284,6 +298,10 @@ form {
 
 .form-show {
   display: block;
+}
+
+.form-close {
+  display: none;
 }
 
 form label {

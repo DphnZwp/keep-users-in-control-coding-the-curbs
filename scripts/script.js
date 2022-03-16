@@ -71,12 +71,12 @@ renderSmartzones()
 async function getSmartzones() {
     const response = await fetch(apiBase)
     const data = await response.json()
-    return data
+    console.log(data.data)
+    return data.data
 }
 
 async function renderSmartzones() {
   const smartzones = await getSmartzones()
-
       smartzones.forEach(smartzone => {
 
         // Create a HTML table

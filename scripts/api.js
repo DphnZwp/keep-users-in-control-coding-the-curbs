@@ -66,35 +66,30 @@ toggleButtonForm.addEventListener('click', () => {
 
 const postSmartzones = document.querySelector('form#smartzoneForm')
 
-// Create a submnit listener
-postSmartzones.addEventListener('submit', function (event) {
+postSmartzones.addEventListener('submit', (post) => {
+  post.preventDefault()
 
-    event.preventDefault();
+  let data = {
+      smartzoneId: document.querySelector('#smartzoneId').value,
+      name: document.querySelector('#name').value,
+      town: document.querySelector('#town').value,
+      location: document.querySelector('#location').value,
+      function: document.querySelector('#function').value,
+      time: document.querySelector('#time').value,
+      size: document.querySelector('#size').value,
+      utilization: document.querySelector('#utilization').value,
+      description: document.querySelector('#description').value,
+      image: document.querySelector('#image').value,
 
-    // Create a data object with data from the create form.
-    let data = {
-        "smartzoneId": parseInt(document.querySelector('#smartzoneId').value),
-        "name": document.querySelector('#name').value,
-        "town": document.querySelector('#town').value,
-        "location": document.querySelector('#location').value,
-        "function": document.querySelector('#function').value,
-        "time": document.querySelector('#time').value,
-        "utilization": document.querySelector('#utilization').value,
-        "description": document.querySelector('#description').value,
-        "image": document.querySelector('#image').value,
-    }
+  }
 
-    // Send the form data to the API
-    fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-    }).then(function (response) {
-        return response.json;
-    }).catch(
-        error => console.log(error)
-    )
+  fetch(apiUrl,{
+     method:'POST',
+     headers:{
+         'Content-Type':'application/json'
+     },
+     body:JSON.stringify(data),
   })
+  .then(res => res.json())
+  .then(data => renderMember(data))
+})

@@ -34,6 +34,54 @@
     <section id="smartzones">
       <h1 class="style-h2">Smartzones</h1>
       <p>Hier is een overzicht met smartzones. Je kan ook smartzones sorteren op functie en stad.</p>
+      <form id="smartzoneForm" action="https://tribe.api.fdnd.nl/v1/member" method="post">
+        <h2 class="style-h3">Smartzone toevoegen</h2>
+        <div>
+          <label for="smartzoneId">SmartzoneId</label>
+          <input type="number" id="smartzoneId">
+        </div>
+        <div>
+          <label for="name">Naam</label>
+          <input type="text" id="name">
+        </div>
+        <div>
+          <label for="town">Stad</label>
+          <input type="text" id="town">
+        </div>
+        <div>
+          <label for="location">Locatie</label>
+          <input type="text" id="location">
+        </div>
+        <div>
+          <label for="function">Functie</label>
+          <input type="text" id="function" placeholder="Bijvoorbeeld de, het of van">
+        </div>
+        <div>
+          <label for="time">Tijdstip</label>
+          <input type="text" id="time">
+        </div>
+        <div>
+          <label for="size">Grootte (plek)</label>
+          <input type="text" id="size">
+        </div>
+        <div>
+          <label for="usage">Gebruik (%)</label>
+          <input type="text" id="usage">
+        </div>
+        <div>
+          <label for="description">Omschrijving</label>
+          <input type="text" id="description">
+        </div>
+        <div>
+          <label for="image">Foto (url)</label>
+          <input type="url" placeholder="https://foto.com"
+          pattern="https://.*" id="image">
+        </div>
+        <div class="form-buttons">
+          <button class="form-gradient-button" type="submit">Toevoegen</button>
+          <button class="form-gradient-button" type="reset">Annuleren</button>
+        </div>
+      </form>
       <div class="sorting">
         <select class="select-function">
           <option>Sorteer op functie</option>
@@ -46,12 +94,13 @@
           <option>Schiedam</option>
           <option>Utrecht</option>
         </select>
-        <button><a class="gradient-button right-arrow" href="all-smartzones.html">Alle smartzones</a></button>
+        <button><a class="gradient-button right-arrow">Alle smartzones</a></button>
+        <button class="form-gradient-button toggle-form">Smartzone toevoegen</button>
       </div>
       <div class="tables">
       </div>
     </section>
   </main>
-	<script src="scripts/sorting.js"></script>
+	<script src="scripts/api.js"></script>
 </body>
 </html>

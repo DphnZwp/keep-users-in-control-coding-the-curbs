@@ -23,8 +23,8 @@
 					</a>
 				</li>
         <li>
-					<a class="links hover-color" href="all-smartzones.html">
-						Alle smartzones 
+					<a class="links hover-color" href="index.html#smartzoneForm">
+						Smartzone toevoegen
 					</a>
 				</li>
 			</ul>
@@ -54,7 +54,7 @@
         </div>
         <div>
           <label for="function">Functie</label>
-          <input type="text" id="function" placeholder="Bijvoorbeeld de, het of van">
+          <input type="text" id="function">
         </div>
         <div>
           <label for="time">Tijdstip</label>
@@ -65,8 +65,8 @@
           <input type="text" id="size">
         </div>
         <div>
-          <label for="usage">Gebruik (%)</label>
-          <input type="text" id="usage">
+          <label for="utilization">Gebruik (%)</label>
+          <input type="text" id="utilization">
         </div>
         <div>
           <label for="description">Omschrijving</label>
@@ -74,15 +74,14 @@
         </div>
         <div>
           <label for="image">Foto (url)</label>
-          <input type="url" placeholder="https://foto.com"
-          pattern="https://.*" id="image">
+          <input type="text" placeholder="https://foto.com" id="image">
         </div>
         <div class="form-buttons">
           <button class="form-gradient-button" type="submit">Toevoegen</button>
           <button class="form-gradient-button" type="reset">Annuleren</button>
         </div>
       </form>
-      <div class="sorting">
+      <section class="sorting">
         <select class="select-function">
           <option>Sorteer op functie</option>
           <option>Deelmobiliteit</option>
@@ -96,7 +95,7 @@
         </select>
         <button><a class="gradient-button right-arrow">Alle smartzones</a></button>
         <button class="form-gradient-button toggle-form">Smartzone toevoegen</button>
-      </div>
+      </section>
       <div class="tables">
       </div>
     </section>

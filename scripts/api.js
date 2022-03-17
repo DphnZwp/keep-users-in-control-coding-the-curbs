@@ -1,10 +1,10 @@
-const apiBase = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
+const apiUrl = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const smartzoneTable = document.querySelector('.tables');
 
 renderSmartzones()
 
 async function getSmartzones() {
-    const response = await fetch(apiBase)
+    const response = await fetch(apiUrl)
     const data = await response.json()
     console.log(data.data)
     return data.data
@@ -62,4 +62,39 @@ const toggleButtonForm = document.querySelector('.toggle-form')
 
 toggleButtonForm.addEventListener('click', () => {
     form.classList.toggle('form-show')
-});
+})
+
+const postSmartzones = document.querySelector('form#smartzoneForm')
+
+// Create a submnit listener
+postSmartzones.addEventListener('submit', function (event) {
+
+    event.preventDefault();
+
+    // Create a data object with data from the create form.
+    let data = {
+        "smartzoneId": parseInt(document.querySelector('#smartzoneId').value),
+        "name": document.querySelector('#name').value,
+        "town": document.querySelector('#town').value,
+        "location": document.querySelector('#location').value,
+        "function": document.querySelector('#function').value,
+        "time": document.querySelector('#time').value,
+        "utilization": document.querySelector('#utilization').value,
+        "description": document.querySelector('#description').value,
+        "image": document.querySelector('#image').value,
+    }
+
+    // Send the form data to the API
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    }).then(function (response) {
+        return response.json;
+    }).catch(
+        error => console.log(error)
+    )
+  })

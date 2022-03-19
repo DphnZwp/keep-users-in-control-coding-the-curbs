@@ -1,111 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-		<!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Coding the Curbs | The smart city of tommorow</title>
-</head>
-<body>
-  <header class="primary-header">
-		<a class="links" href="index.html">
-			<img class="logo" src="assets/CTC_Primary_Logo_Black.png" alt="logo">
-		</a>
-		<nav>
-			<ul class="primary-navigation">
-				<li>
-					<a class="links hover-color" href="index.html#smartzones">
-						Smartzones
-					</a>
-				</li>
-        <li>
-					<a class="links hover-color" href="index.html#smartzoneForm">
-						Smartzone toevoegen
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-  <main>
-    <section id="smartzones">
-      <h1 class="style-h2">Smartzones</h1>
-      <p>Hier is een overzicht met smartzones. Je kan ook smartzones sorteren op functie en stad.</p>
-      <form id="smartzoneForm" action="https://codingthecurbs.api.fdnd.nl/v1/smartzone" method="post">
-        <button class="close-button"></button>
-        <h2 class="style-h3">Smartzone toevoegen</h2>
-        <div>
-          <label for="smartzoneId">SmartzoneId</label>
-          <input type="number" id="smartzoneId">
-        </div>
-        <div>
-          <label for="name">Naam</label>
-          <input type="text" id="name">
-        </div>
-        <div>
-          <label for="town">Stad</label>
-          <input type="text" id="town">
-        </div>
-        <div>
-          <label for="location">Locatie</label>
-          <input type="text" id="location">
-        </div>
-        <div>
-          <label for="function">Functie</label>
-          <input type="text" id="function">
-        </div>
-        <div>
-          <label for="time">Tijdstip</label>
-          <input type="text" id="time">
-        </div>
-        <div>
-          <label for="size">Grootte (plek)</label>
-          <input type="text" id="size">
-        </div>
-        <div>
-          <label for="utilization">Gebruik (%)</label>
-          <input type="text" id="utilization">
-        </div>
-        <div>
-          <label for="description">Omschrijving</label>
-          <input type="text" id="description">
-        </div>
-        <div>
-          <label for="image">Foto (url)</label>
-          <input type="text" placeholder="https://foto.com" id="image">
-        </div>
-        <div class="form-buttons">
-          <button class="form-gradient-button" type="submit">Toevoegen</button>
-          <button class="form-gradient-button" type="reset">Annuleren</button>
-        </div>
-      </form>
-      <section class="crud-buttons">
-        <button class="gradient-button toggle-form-post">Smartzone toevoegen</button>
-        <button class="gradient-button toggle-form-put">Smartzone bewerken</button>
-        <button class="gradient-button toggle-form-delete">Smartzone verwijderen</button>
+  </head>
+  <body>
+    <header class="primary-header">
+      <a class="links" href="index.html">
+        <img
+          class="logo"
+          src="assets/CTC_Primary_Logo_Black.png"
+          alt="logo van Coding the Curbs"
+        />
+      </a>
+      <nav>
+        <ul class="primary-navigation">
+          <li>
+            <a class="links hover-color" href="index.html#smartzones">
+              Smartzones
+            </a>
+          </li>
+          <li>
+            <a class="links hover-color" href="index.html#smartzoneForm">
+              Smartzone toevoegen
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="smartzones">
+        <h1 class="style-h2">Smartzones</h1>
+        <p>
+          Hier is een overzicht met smartzones. Je kan ook smartzones sorteren
+          op functie en stad.
+        </p>
+        <form
+          id="smartzoneForm"
+          action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
+          method="post"
+        >
+          <button class="close-button"></button>
+          <h2 class="style-h3">Smartzone toevoegen</h2>
+          <div>
+            <label for="smartzoneId">SmartzoneId</label>
+            <input type="number" id="smartzoneId" />
+          </div>
+          <div>
+            <label for="name">Naam</label>
+            <input type="text" id="name" />
+          </div>
+          <div>
+            <label for="town">Stad</label>
+            <input type="text" id="town" />
+          </div>
+          <div>
+            <label for="location">Locatie</label>
+            <input type="text" id="location" />
+          </div>
+          <div>
+            <label for="function">Functie</label>
+            <input type="text" id="function" />
+          </div>
+          <div>
+            <label for="time">Tijdstip</label>
+            <input type="text" id="time" />
+          </div>
+          <div>
+            <label for="size">Grootte (plek)</label>
+            <input type="text" id="size" />
+          </div>
+          <div>
+            <label for="utilization">Gebruik (%)</label>
+            <input type="text" id="utilization" />
+          </div>
+          <div>
+            <label for="description">Omschrijving</label>
+            <input type="text" id="description" />
+          </div>
+          <div>
+            <label for="image">Foto (url)</label>
+            <input type="text" placeholder="https://foto.com" id="image" />
+          </div>
+          <div class="form-buttons">
+            <button class="form-gradient-button" type="submit">
+              Toevoegen
+            </button>
+            <button class="form-gradient-button" type="reset">Annuleren</button>
+          </div>
+        </form>
+        <section class="crud-buttons">
+          <button class="gradient-button toggle-form-post">
+            Smartzone toevoegen
+          </button>
+          <button class="gradient-button toggle-form-put">
+            Smartzone bewerken
+          </button>
+          <button class="gradient-button toggle-form-delete">
+            Smartzone verwijderen
+          </button>
+        </section>
+        <section class="sorting">
+          <select class="select-function">
+            <option>Sorteer op functie</option>
+            <option>Deelmobiliteit</option>
+          </select>
+          <select class="select-town">
+            <option>Sorteer op stad</option>
+            <option>Amsterdam</option>
+            <option>Rotterdam</option>
+            <option>Schiedam</option>
+            <option>Utrecht</option>
+          </select>
+          <button><a class="smartzones-button">Alle smartzones</a></button>
+        </section>
+        <div class="tables"></div>
       </section>
-      <section class="sorting">
-        <select class="select-function">
-          <option>Sorteer op functie</option>
-          <option>Deelmobiliteit</option>
-        </select>
-        <select class="select-town">
-          <option>Sorteer op stad</option>
-          <option>Amsterdam</option>
-          <option>Rotterdam</option>
-          <option>Schiedam</option>
-          <option>Utrecht</option>
-        </select>
-        <button><a class="smartzones-button">Alle smartzones</a></button>
-      </section>
-      <div class="tables">
-      </div>
-    </section>
-  </main>
-  <script src="scripts/api.js"></script>
-  <script src="scripts/render.js"></script>
-</body>
+    </main>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/render.js"></script>
+  </body>
 </html>

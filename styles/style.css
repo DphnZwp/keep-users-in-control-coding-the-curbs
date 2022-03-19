@@ -460,7 +460,7 @@ article {
     font-size: 1.1875rem;
     text-align: left;
     width: 80%;
-    border: 2.5px solid black;
+    border: 2.5px solid var(--dark-blue);
     border-collapse: collapse;
     border-spacing: 0px;
     background-color: white;
@@ -470,11 +470,11 @@ article {
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-color: var(--blue);
-    border-bottom: 2.5px solid #000;
+    border-bottom: 2.5px solid var(--dark-blue);
   }
 
   td {
-    border-bottom: 2.5px solid #000;
+    border-bottom: 2.5px solid var(--dark-blue);
   }
 
   img {

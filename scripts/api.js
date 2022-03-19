@@ -1,13 +1,13 @@
-const apiUrl = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
-
+// Toggle variables
 const form = document.querySelector('form')
-const toggleButtonForm = document.querySelector('.toggle-form')
+const toggleButtonForm = document.querySelector('.toggle-form-post')
+// Post variables
+const apiUrl = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
+const postSmartzones = document.querySelector('form#smartzoneForm')
 
 toggleButtonForm.addEventListener('click', () => {
     form.classList.toggle('form-show')
 })
-
-const postSmartzones = document.querySelector('form#smartzoneForm')
 
 postSmartzones.addEventListener('submit', (post) => {
   post.preventDefault()
@@ -33,6 +33,4 @@ postSmartzones.addEventListener('submit', (post) => {
      },
      body:JSON.stringify(data),
   })
-  .then(res => res.json())
-  .then(data => renderMember(data))
 })

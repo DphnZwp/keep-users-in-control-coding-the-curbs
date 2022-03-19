@@ -1,29 +1,30 @@
 const apiBase = 'smartzones.json'
-const smartzoneTable = document.querySelector('.tables');
+const smartzoneTable = document.querySelector('.tables')
 
 async function loadSmartzones() {
-    return (await fetch(apiBase)).json();
+  return (await fetch(apiBase)).json()
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-    let smartzones = [];
-    try {
-        smartzones = await loadSmartzones()
-    } catch (error) {
-        console.log("Error")
-        console.log(error)
-    }
-
-    fillSmartzoneTable(smartzones)
+document.addEventListener('DOMContentLoaded', async () => {
+  let smartzones = []
+  try {
+    smartzones = await loadSmartzones()
+  } catch (error) {
+    console.log('Error')
+    console.log(error)
+  }
+  fillSmartzoneTable(smartzones)
 })
 
 function fillSmartzoneTable(smartzones) {
-  smartzones.filter(smartzone => {
-    return smartzone.town === 'Utrecht'
-}).map(smartzone => {
-
-    // Create a HTML table
-    smartzoneTable.insertAdjacentHTML('beforeend',
+  smartzones
+    .filter((smartzone) => {
+      return smartzone.town === 'Utrecht'
+    })
+    .map((smartzone) => {
+      // Create a HTML table
+      smartzoneTable.insertAdjacentHTML(
+        'beforeend',
         `
         <table>
         <tr>
@@ -59,8 +60,8 @@ function fillSmartzoneTable(smartzones) {
             <td>${smartzone.description}</td>
         </tr>
         </table>
-        <img src="https://via.placeholder.com/510.png/524dd0/fff" alt="">
+        <img src="${smartzone.image}">
     `
-    )
-})
+      )
+    })
 }

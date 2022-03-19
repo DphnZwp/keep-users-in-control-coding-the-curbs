@@ -1,22 +1,22 @@
 const apiBase = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
-const smartzoneTable = document.querySelector('.tables');
+const smartzoneTable = document.querySelector('.tables')
 
 renderSmartzones()
 
 async function getSmartzones() {
-    const response = await fetch(apiBase)
-    const data = await response.json()
-    console.log(data.data)
-    return data.data
+  const response = await fetch(apiBase)
+  const data = await response.json()
+  console.log(data.data)
+  return data.data
 }
 
 async function renderSmartzones() {
   const smartzones = await getSmartzones()
-      smartzones.forEach(smartzone => {
-
-        // Create a HTML table
-        smartzoneTable.insertAdjacentHTML('beforeend',
-            `
+  smartzones.forEach((smartzone) => {
+    // Create a HTML table
+    smartzoneTable.insertAdjacentHTML(
+      'beforeend',
+      `
             <table>
             <tr>
                 <th>Naam</th>
@@ -51,8 +51,8 @@ async function renderSmartzones() {
                 <td>${smartzone.description}</td>
             </tr>
             </table>
-            <img src="https://via.placeholder.com/510.png/524dd0/fff" alt="">
+            <img src="${smartzone.image}">
         `
-        )
-    })
+    )
+  })
 }

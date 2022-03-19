@@ -35,6 +35,7 @@
       <h1 class="style-h2">Smartzones</h1>
       <p>Hier is een overzicht met smartzones. Je kan ook smartzones sorteren op functie en stad.</p>
       <form id="smartzoneForm" action="https://codingthecurbs.api.fdnd.nl/v1/smartzone" method="post">
+        <button class="close-button"></button>
         <h2 class="style-h3">Smartzone toevoegen</h2>
         <div>
           <label for="smartzoneId">SmartzoneId</label>
@@ -81,6 +82,11 @@
           <button class="form-gradient-button" type="reset">Annuleren</button>
         </div>
       </form>
+      <section class="crud-buttons">
+        <button class="gradient-button toggle-form-post">Smartzone toevoegen</button>
+        <button class="gradient-button toggle-form-put">Smartzone bewerken</button>
+        <button class="gradient-button toggle-form-delete">Smartzone verwijderen</button>
+      </section>
       <section class="sorting">
         <select class="select-function">
           <option>Sorteer op functie</option>
@@ -93,8 +99,7 @@
           <option>Schiedam</option>
           <option>Utrecht</option>
         </select>
-        <button><a class="gradient-button right-arrow">Alle smartzones</a></button>
-        <button class="form-gradient-button toggle-form">Smartzone toevoegen</button>
+        <button><a class="smartzones-button">Alle smartzones</a></button>
       </section>
       <div class="tables">
       </div>

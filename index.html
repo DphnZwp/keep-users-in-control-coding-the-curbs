@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="https://static.wixstatic.com/media/21dd0d_b853e3da14384a35a71b4995288f5b5d%7Emv2.jpg/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/21dd0d_b853e3da14384a35a71b4995288f5b5d%7Emv2.jpg"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <!-- FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <title>Coding the Curbs | The smart city of tommorow</title>
   </head>
   <body>
@@ -29,11 +33,6 @@
               Smartzones
             </a>
           </li>
-          <li>
-            <a class="links hover-color" href="index.html#smartzoneForm">
-              Smartzone toevoegen
-            </a>
-          </li>
         </ul>
       </nav>
     </header>
@@ -45,12 +44,120 @@
           op functie en stad.
         </p>
         <form
-          id="smartzoneForm"
+          id="smartzonePostForm"
           action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
           method="post"
         >
-          <button class="close-button"></button>
+          <img class="close-button-post" src="assets/svgs/close.svg" alt="" />
           <h2 class="style-h3">Smartzone toevoegen</h2>
+          <div>
+            <label for="smartzoneId">SmartzoneId</label>
+            <input type="number" id="smartzoneId" />
+          </div>
+          <div>
+            <label for="name">Naam</label>
+            <input type="text" id="name" />
+          </div>
+          <div>
+            <label for="town">Stad</label>
+            <input type="text" id="town" />
+          </div>
+          <div>
+            <label for="location">Locatie</label>
+            <input type="text" id="location" />
+          </div>
+          <div>
+            <label for="function">Functie</label>
+            <input type="text" id="function" />
+          </div>
+          <div>
+            <label for="time">Tijdstip</label>
+            <input type="text" id="time" />
+          </div>
+          <div>
+            <label for="size">Grootte (plek)</label>
+            <input type="text" id="size" />
+          </div>
+          <div>
+            <label for="utilization">Gebruik (%)</label>
+            <input type="text" id="utilization" />
+          </div>
+          <div>
+            <label for="description">Omschrijving</label>
+            <input type="text" id="description" />
+          </div>
+          <div>
+            <label for="image">Foto (url)</label>
+            <input type="text" placeholder="https://foto.com" id="image" />
+          </div>
+          <div class="form-buttons">
+            <button class="form-gradient-button" type="submit">
+              Toevoegen
+            </button>
+            <button class="form-gradient-button" type="reset">Annuleren</button>
+          </div>
+        </form>
+        <form
+          id="smartzonePutForm"
+          action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
+          method="put"
+        >
+          <img class="close-button-put" src="assets/svgs/close.svg" alt="" />
+          <h2 class="style-h3">Smartzone bewerken</h2>
+          <div>
+            <label for="smartzoneId">SmartzoneId</label>
+            <input type="number" id="smartzoneId" />
+          </div>
+          <div>
+            <label for="name">Naam</label>
+            <input type="text" id="name" />
+          </div>
+          <div>
+            <label for="town">Stad</label>
+            <input type="text" id="town" />
+          </div>
+          <div>
+            <label for="location">Locatie</label>
+            <input type="text" id="location" />
+          </div>
+          <div>
+            <label for="function">Functie</label>
+            <input type="text" id="function" />
+          </div>
+          <div>
+            <label for="time">Tijdstip</label>
+            <input type="text" id="time" />
+          </div>
+          <div>
+            <label for="size">Grootte (plek)</label>
+            <input type="text" id="size" />
+          </div>
+          <div>
+            <label for="utilization">Gebruik (%)</label>
+            <input type="text" id="utilization" />
+          </div>
+          <div>
+            <label for="description">Omschrijving</label>
+            <input type="text" id="description" />
+          </div>
+          <div>
+            <label for="image">Foto (url)</label>
+            <input type="text" placeholder="https://foto.com" id="image" />
+          </div>
+          <div class="form-buttons">
+            <button class="form-gradient-button" type="submit">
+              Toevoegen
+            </button>
+            <button class="form-gradient-button" type="reset">Annuleren</button>
+          </div>
+        </form>
+        <form
+          id="smartzoneDeleteForm"
+          action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
+          method="delete"
+        >
+          <img class="close-button-delete" src="assets/svgs/close.svg" alt="" />
+          <h2 class="style-h3">Smartzone verwijderen</h2>
           <div>
             <label for="smartzoneId">SmartzoneId</label>
             <input type="number" id="smartzoneId" />
@@ -109,20 +216,7 @@
             Smartzone verwijderen
           </button>
         </section>
-        <section class="sorting">
-          <select class="select-function">
-            <option>Sorteer op functie</option>
-            <option>Deelmobiliteit</option>
-          </select>
-          <select class="select-town">
-            <option>Sorteer op stad</option>
-            <option>Amsterdam</option>
-            <option>Rotterdam</option>
-            <option>Schiedam</option>
-            <option>Utrecht</option>
-          </select>
-          <button><a class="smartzones-button">Alle smartzones</a></button>
-        </section>
+        <section class="sorting"></section>
         <div class="tables"></div>
       </section>
     </main>

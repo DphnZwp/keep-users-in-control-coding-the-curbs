@@ -1,36 +1,87 @@
 // Toggle variables
-const form = document.querySelector('form')
-const toggleButtonForm = document.querySelector('.toggle-form-post')
+const toggleButtonPost = document.querySelector('.toggle-form-post')
+const toggleButtonPut = document.querySelector('.toggle-form-put')
+const toggleButtonDelete = document.querySelector('.toggle-form-delete')
+const closeButtonPost = document.querySelector('.close-button-post')
+const closeButtonPut = document.querySelector('.close-button-put')
+const closeButtonDelete = document.querySelector('.close-button-delete')
+
 // Post variables
 const apiUrl = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
-const postSmartzones = document.querySelector('form#smartzoneForm')
+const smartzonePostForm = document.querySelector('form#smartzonePostForm')
+const smartzonePutForm = document.querySelector('form#smartzonePutForm')
+const smartzoneDeleteForm = document.querySelector('form#smartzoneDeleteForm')
 
-toggleButtonForm.addEventListener('click', () => {
-    form.classList.toggle('form-show')
+toggleButtonPost.addEventListener('click', () => {
+  smartzonePostForm.classList.toggle('form-show')
 })
 
-postSmartzones.addEventListener('submit', (post) => {
+toggleButtonPut.addEventListener('click', () => {
+  smartzonePutForm.classList.toggle('form-show')
+})
+
+toggleButtonDelete.addEventListener('click', () => {
+  smartzoneDeleteForm.classList.toggle('form-show')
+})
+
+closeButtonPost.addEventListener('click', () => {
+  smartzonePostForm.classList.remove('form-show')
+})
+
+closeButtonPut.addEventListener('click', () => {
+  smartzonePutForm.classList.remove('form-show')
+})
+
+closeButtonDelete.addEventListener('click', () => {
+  smartzoneDeleteForm.classList.remove('form-show')
+})
+
+smartzonePostForm.addEventListener('submit', (post) => {
   post.preventDefault()
 
   let data = {
-      smartzoneId: document.querySelector('#smartzoneId').value,
-      name: document.querySelector('#name').value,
-      town: document.querySelector('#town').value,
-      location: document.querySelector('#location').value,
-      function: document.querySelector('#function').value,
-      time: document.querySelector('#time').value,
-      size: document.querySelector('#size').value,
-      utilization: document.querySelector('#utilization').value,
-      description: document.querySelector('#description').value,
-      image: document.querySelector('#image').value,
-
+    smartzoneId: document.querySelector('#smartzoneId').value,
+    name: document.querySelector('#name').value,
+    town: document.querySelector('#town').value,
+    location: document.querySelector('#location').value,
+    function: document.querySelector('#function').value,
+    time: document.querySelector('#time').value,
+    size: document.querySelector('#size').value,
+    utilization: document.querySelector('#utilization').value,
+    description: document.querySelector('#description').value,
+    image: document.querySelector('#image').value,
   }
 
-  fetch(apiUrl,{
-     method:'POST',
-     headers:{
-         'Content-Type':'application/json'
-     },
-     body:JSON.stringify(data),
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+})
+
+smartzonePutForm.addEventListener('submit', (put) => {
+  post.preventDefault()
+
+  let data = {
+    smartzoneId: document.querySelector('#smartzoneId').value,
+    name: document.querySelector('#name').value,
+    town: document.querySelector('#town').value,
+    location: document.querySelector('#location').value,
+    function: document.querySelector('#function').value,
+    time: document.querySelector('#time').value,
+    size: document.querySelector('#size').value,
+    utilization: document.querySelector('#utilization').value,
+    description: document.querySelector('#description').value,
+    image: document.querySelector('#image').value,
+  }
+
+  fetch(apiUrl, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
   })
 })

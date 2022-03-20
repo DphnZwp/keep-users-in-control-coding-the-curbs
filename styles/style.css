@@ -174,21 +174,42 @@ li {
   content: url('../assets/svgs/trash-blue.svg');
 }
 
-.close-button {
-  background-image: url('../assets/svgs/close.svg');
-  background-repeat: no-repeat;
+.close-button-post,
+.close-button-put,
+.close-button-delete {
   display: block;
   margin-left: auto;
   margin-right: 0;
-  width: min-content;
-  padding: 15px;
+  cursor: pointer;
+  height: min-content;
+  width: 2.5em;
+}
+
+.select-name {
+  margin: 0.5em 0;
+  padding: 0 1em;
+  font-size: 1rem;
+  font-weight: 500;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 55.8 33.4' style='enable-background:new 0 0 55.8 33.4;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M31.8,31.8c0.3-0.3,0.5-0.6,0.7-0.9L54.2,9.3c2.1-2.1,2.1-5.5,0-7.6c-2.1-2.1-5.5-2.1-7.6,0L27.9,20.3L9.2,1.6 c-2.1-2.1-5.5-2.1-7.6,0C0.5,2.6,0,4,0,5.4c0,1.4,0.5,2.8,1.6,3.8l21.7,21.7c0.2,0.3,0.4,0.6,0.7,0.9c1.1,1.1,2.5,1.6,3.9,1.6 C29.3,33.4,30.8,32.9,31.8,31.8z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position-x: 10em;
+  background-position-y: 1.1em;
+  background-size: 1em;
+  text-indent: 1em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13.5em;
+  height: 3em;
+  border: 0.127em solid var(--dark-blue);
+  border-radius: 2em;
   cursor: pointer;
 }
 
 .select-function {
   margin: 0.5em 0;
   padding: 0 1em;
-  font-size: 1.1875rem;
+  font-size: 1rem;
   font-weight: 500;
   background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 55.8 33.4' style='enable-background:new 0 0 55.8 33.4;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M31.8,31.8c0.3-0.3,0.5-0.6,0.7-0.9L54.2,9.3c2.1-2.1,2.1-5.5,0-7.6c-2.1-2.1-5.5-2.1-7.6,0L27.9,20.3L9.2,1.6 c-2.1-2.1-5.5-2.1-7.6,0C0.5,2.6,0,4,0,5.4c0,1.4,0.5,2.8,1.6,3.8l21.7,21.7c0.2,0.3,0.4,0.6,0.7,0.9c1.1,1.1,2.5,1.6,3.9,1.6 C29.3,33.4,30.8,32.9,31.8,31.8z'/%3E%3C/g%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
@@ -209,7 +230,7 @@ li {
 .select-town {
   margin: 0.5em 0;
   padding: 0 1em;
-  font-size: 1.1875rem;
+  font-size: 1rem;
   font-weight: 500;
   background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 55.8 33.4' style='enable-background:new 0 0 55.8 33.4;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M31.8,31.8c0.3-0.3,0.5-0.6,0.7-0.9L54.2,9.3c2.1-2.1,2.1-5.5,0-7.6c-2.1-2.1-5.5-2.1-7.6,0L27.9,20.3L9.2,1.6 c-2.1-2.1-5.5-2.1-7.6,0C0.5,2.6,0,4,0,5.4c0,1.4,0.5,2.8,1.6,3.8l21.7,21.7c0.2,0.3,0.4,0.6,0.7,0.9c1.1,1.1,2.5,1.6,3.9,1.6 C29.3,33.4,30.8,32.9,31.8,31.8z'/%3E%3C/g%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
@@ -227,6 +248,27 @@ li {
   cursor: pointer;
 }
 
+.select-location {
+  margin: 0.5em 0;
+  padding: 0 1em;
+  font-size: 1rem;
+  font-weight: 500;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 55.8 33.4' style='enable-background:new 0 0 55.8 33.4;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M31.8,31.8c0.3-0.3,0.5-0.6,0.7-0.9L54.2,9.3c2.1-2.1,2.1-5.5,0-7.6c-2.1-2.1-5.5-2.1-7.6,0L27.9,20.3L9.2,1.6 c-2.1-2.1-5.5-2.1-7.6,0C0.5,2.6,0,4,0,5.4c0,1.4,0.5,2.8,1.6,3.8l21.7,21.7c0.2,0.3,0.4,0.6,0.7,0.9c1.1,1.1,2.5,1.6,3.9,1.6 C29.3,33.4,30.8,32.9,31.8,31.8z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position-x: 10.8em;
+  background-position-y: 1.1em;
+  background-size: 1em;
+  text-indent: 1em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13.5em;
+  height: 3em;
+  border: 0.127em solid var(--dark-blue);
+  border-radius: 2em;
+  cursor: pointer;
+}
+
 option {
   width: 12em;
 }
@@ -235,7 +277,7 @@ option {
   padding: 0.874em 3em;
   margin: 1em 0;
   display: block;
-  font-size: 1.1875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--white);
   width: max-content;
@@ -255,7 +297,7 @@ option {
   padding: 0.874em 3em;
   margin: 0.5em 0;
   display: block;
-  font-size: 1.1875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--white);
   width: max-content;
@@ -300,7 +342,8 @@ td {
 }
 
 img {
-  height: 31.875em;
+  height: auto;
+  width: 100%;
   margin: 1.5em 0;
 }
 
@@ -312,7 +355,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5em;
+  gap: 1em;
 }
 
 .form-gradient-button {
@@ -357,10 +400,6 @@ form {
 
 .form-show {
   display: block;
-}
-
-.form-close {
-  display: none;
 }
 
 form label {
@@ -438,15 +477,30 @@ article {
     flex-wrap: nowrap;
   }
 
+  .gradient-button {
+    font-size: 1.1875rem;
+  }
+
   .crud-buttons {
     flex-direction: row;
-    gap: 1.5em;
+    gap: 1em;
   }
 
   .sorting {
     margin-bottom: 1em;
     flex-direction: row;
-    gap: 1.5em;
+    gap: 1em;
+  }
+
+  .select-function,
+  .select-location,
+  .select-name,
+  .select-town {
+    font-size: 1.1875rem;
+  }
+
+  .smartzones-button {
+    font-size: 1.1875rem;
   }
 
   .tables {
@@ -478,6 +532,7 @@ article {
   }
 
   img {
+    height: 31.875em;
     width: 90%;
     margin-right: 5em;
   }

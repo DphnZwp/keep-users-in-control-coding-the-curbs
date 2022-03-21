@@ -78,6 +78,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .logo {
@@ -146,6 +147,19 @@ li {
 
 .toggle-form-post:hover:after {
   content: url('../assets/svgs/cross-blue.svg');
+}
+
+.toggle-all-smartzones:after {
+  content: url('../assets/svgs/down-arrow-white.svg');
+  position: relative;
+  top: 0.1em;
+  margin-left: 0.5em;
+  display: inline-block;
+  width: 1em;
+}
+
+.toggle-all-smartzones:hover:after {
+  content: url('../assets/svgs/down-arrow-blue.svg');
 }
 
 .toggle-form-put:after {
@@ -227,6 +241,17 @@ li {
   cursor: pointer;
 }
 
+.content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
 .select-town {
   margin: 0.5em 0;
   padding: 0 1em;
@@ -271,6 +296,12 @@ li {
 
 option {
   width: 12em;
+}
+
+span {
+  display: none;
+  opacity: 0;
+  text-decoration: none;
 }
 
 .gradient-button {

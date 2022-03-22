@@ -1,14 +1,14 @@
 // Toggle variables
 const toggleButtonPost = document.querySelector('.toggle-form-post')
-// const toggleButtonPut = document.querySelector('.toggle-form-put')
+const toggleButtonPut = document.querySelector('.toggle-form-put')
 const toggleButtonDelete = document.querySelector('.toggle-form-delete')
 const closeButtonPost = document.querySelector('.close-button-post')
-// const closeButtonPut = document.querySelector('.close-button-put')
+const closeButtonPut = document.querySelector('.close-button-put')
 const closeButtonDelete = document.querySelector('.close-button-delete')
 // Post variables
 const apiUrl = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const smartzonePostForm = document.querySelector('form#smartzonePostForm')
-// const smartzonePutForm = document.querySelector('form#smartzonePutForm')
+const smartzonePutForm = document.querySelector('form#smartzonePutForm')
 const smartzoneDeleteForm = document.querySelector('form#smartzoneDeleteForm')
 
 // Toggle buttons show form
@@ -16,9 +16,9 @@ toggleButtonPost.addEventListener('click', () => {
   smartzonePostForm.classList.toggle('form-show')
 })
 
-// toggleButtonPut.addEventListener('click', () => {
-//   smartzonePutForm.classList.toggle('form-show')
-// })
+toggleButtonPut.addEventListener('click', () => {
+  smartzonePutForm.classList.toggle('form-show')
+})
 
 toggleButtonDelete.addEventListener('click', () => {
   smartzoneDeleteForm.classList.toggle('form-show')
@@ -28,9 +28,9 @@ closeButtonPost.addEventListener('click', () => {
   smartzonePostForm.classList.remove('form-show')
 })
 
-// closeButtonPut.addEventListener('click', () => {
-//   smartzonePutForm.classList.remove('form-show')
-// })
+closeButtonPut.addEventListener('click', () => {
+  smartzonePutForm.classList.remove('form-show')
+})
 
 closeButtonDelete.addEventListener('click', () => {
   smartzoneDeleteForm.classList.remove('form-show')
@@ -59,6 +59,22 @@ smartzonePostForm.addEventListener('submit', (post) => {
     },
     body: JSON.stringify(data),
   })
+})
+
+smartzonePutForm.addEventListener('submit', (post) => {
+  post.preventDefault()
+  let data = {
+    smartzoneId: document.querySelector('#smartzonePutForm #smartzoneId').value,
+    name: document.querySelector('#smartzonePutForm #name').value,
+    town: document.querySelector('#smartzonePutForm #town').value,
+    location: document.querySelector('#smartzonePutForm #location').value,
+    function: document.querySelector('#smartzonePutForm #function').value,
+    time: document.querySelector('#smartzonePutForm #time').value,
+    size: document.querySelector('#smartzonePutForm #size').value,
+    utilization: document.querySelector('#smartzonePutForm #utilization').value,
+    description: document.querySelector('#smartzonePutForm #description').value,
+    image: document.querySelector('#smartzonePutForm #image').value,
+  }
 
   fetch(apiUrl, {
     method: 'PUT',

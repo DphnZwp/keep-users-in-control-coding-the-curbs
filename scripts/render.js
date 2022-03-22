@@ -82,7 +82,7 @@ function renderSmartzones(data) {
         <td>Eerste smartzone in Nederland</td>
     </tr>
     </table>
-    <img src="https://raw.githubusercontent.com/M4TThys123/keep-users-in-control-coding-the-curbs/main/assets/Twijn.png">
+    <img src="https://user-images.githubusercontent.com/69635977/159494746-42176b30-cecd-461d-987f-712e4e5c97b9.png">
     <table>
     <tr>
         <th>Naam</th>
@@ -117,7 +117,7 @@ function renderSmartzones(data) {
         <td>Eerste smartzone in Nederland</td>
     </tr>
     </table>
-    <img src="https://raw.githubusercontent.com/M4TThys123/keep-users-in-control-coding-the-curbs/main/assets/Sarah.png">
+    <img src="https://user-images.githubusercontent.com/69635977/159494652-9cfa5018-10a5-47d3-be69-678424263b0c.png">
     `
 }
 

@@ -18,8 +18,8 @@
     <title>Coding the Curbs | The smart city of tommorow</title>
   </head>
   <body>
-    <header class="primary-header">
-      <a class="links" href="index.html">
+    <header>
+      <a href="index.html">
         <img
           class="logo"
           src="assets/CTC_Primary_Logo_Black.png"
@@ -29,7 +29,7 @@
       <nav>
         <ul class="primary-navigation">
           <li>
-            <a class="links hover-color" href="index.html#smartzones">
+            <a href="#smartzones">
               Smartzones
             </a>
           </li>
@@ -43,185 +43,199 @@
           Hier is een overzicht met smartzones. Je kan ook smartzones sorteren
           op naam, functie, stad en locatie.
         </p>
-        <form
-          id="smartzonePostForm"
-          action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
-          method="post"
-        >
-          <img class="close-button-post" src="assets/svgs/close.svg" alt="" />
-          <h2 class="style-h3">Smartzone toevoegen</h2>
-          <div>
-            <label for="smartzoneId">SmartzoneId</label>
-            <input type="number" id="smartzoneId" />
-          </div>
-          <div>
-            <label for="name">Naam</label>
-            <input type="text" id="name" />
-          </div>
-          <div>
-            <label for="town">Stad</label>
-            <input type="text" id="town" />
-          </div>
-          <div>
-            <label for="location">Locatie</label>
-            <input type="text" id="location" />
-          </div>
-          <div>
-            <label for="function">Functie</label>
-            <input type="text" id="function" />
-          </div>
-          <div>
-            <label for="time">Tijdstip</label>
-            <input type="text" id="time" />
-          </div>
-          <div>
-            <label for="size">Grootte (plek)</label>
-            <input type="text" id="size" />
-          </div>
-          <div>
-            <label for="utilization">Gebruik (%)</label>
-            <input type="text" id="utilization" />
-          </div>
-          <div>
-            <label for="description">Omschrijving</label>
-            <input type="text" id="description" />
-          </div>
-          <div>
-            <label for="image">Foto (url)</label>
-            <input type="text" placeholder="https://foto.com" id="image" />
-          </div>
-          <div class="form-buttons">
-            <button class="form-gradient-button" type="submit">
-              Toevoegen
-            </button>
-            <button class="form-gradient-button" type="reset">Annuleren</button>
-          </div>
-        </form>
-        <form
-          id="smartzonePutForm"
-          action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
-          method="put"
-        >
-          <img class="close-button-put" src="assets/svgs/close.svg" alt="" />
-          <h2 class="style-h3">Smartzone bewerken</h2>
-          <div>
-            <label for="smartzoneId">SmartzoneId</label>
-            <input type="number" id="smartzoneId" />
-          </div>
-          <div>
-            <label for="name">Naam</label>
-            <input type="text" id="name" />
-          </div>
-          <div>
-            <label for="town">Stad</label>
-            <input type="text" id="town" />
-          </div>
-          <div>
-            <label for="location">Locatie</label>
-            <input type="text" id="location" />
-          </div>
-          <div>
-            <label for="function">Functie</label>
-            <input type="text" id="function" />
-          </div>
-          <div>
-            <label for="time">Tijdstip</label>
-            <input type="text" id="time" />
-          </div>
-          <div>
-            <label for="size">Grootte (plek)</label>
-            <input type="text" id="size" />
-          </div>
-          <div>
-            <label for="utilization">Gebruik (%)</label>
-            <input type="text" id="utilization" />
-          </div>
-          <div>
-            <label for="description">Omschrijving</label>
-            <input type="text" id="description" />
-          </div>
-          <div>
-            <label for="image">Foto (url)</label>
-            <input type="text" placeholder="https://foto.com" id="image" />
-          </div>
-          <div class="form-buttons">
-            <button class="form-gradient-button" type="submit">Bewerken</button>
-            <button class="form-gradient-button" type="reset">Annuleren</button>
-          </div>
-        </form>
-        <form
-          id="smartzoneDeleteForm"
-          action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
-          method="delete"
-        >
-          <img class="close-button-delete" src="assets/svgs/close.svg" alt="" />
-          <h2 class="style-h3">Smartzone verwijderen</h2>
-          <div>
-            <label for="smartzoneId">SmartzoneId</label>
-            <input type="number" id="smartzoneId" />
-          </div>
-          <div>
-            <label for="name">Naam</label>
-            <input type="text" id="name" />
-          </div>
-          <div>
-            <label for="town">Stad</label>
-            <input type="text" id="town" />
-          </div>
-          <div>
-            <label for="location">Locatie</label>
-            <input type="text" id="location" />
-          </div>
-          <div>
-            <label for="function">Functie</label>
-            <input type="text" id="function" />
-          </div>
-          <div>
-            <label for="time">Tijdstip</label>
-            <input type="text" id="time" />
-          </div>
-          <div>
-            <label for="size">Grootte (plek)</label>
-            <input type="text" id="size" />
-          </div>
-          <div>
-            <label for="utilization">Gebruik (%)</label>
-            <input type="text" id="utilization" />
-          </div>
-          <div>
-            <label for="description">Omschrijving</label>
-            <input type="text" id="description" />
-          </div>
-          <div>
-            <label for="image">Foto (url)</label>
-            <input type="text" placeholder="https://foto.com" id="image" />
-          </div>
-          <div class="form-buttons">
-            <button class="form-gradient-button" type="submit">
-              Verwijderen
-            </button>
-            <button class="form-gradient-button" type="reset">Annuleren</button>
-          </div>
-        </form>
-        <section class="crud-buttons">
-          <button class="gradient-button toggle-form-post">
-            Smartzone toevoegen
-          </button>
-          <!-- <button class="gradient-button toggle-form-put">
-            Smartzone bewerken
-          </button>
-          <button class="gradient-button toggle-form-delete">
-            Smartzone verwijderen
-          </button> -->
-          <button class="smartzones-button toggle-all-smartzones">
-            Alle smartzones
-          </button>
-        </section>
-        <section class="sorting"></section>
-        <div class="tables"></div>
       </section>
+      <form
+        id="smartzonePostForm"
+        action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
+        method="post"
+      >
+        <img class="close-button-post" src="assets/svgs/close.svg" alt="" />
+        <h2 class="style-h3">Smartzone toevoegen en bewerken</h2>
+        <div>
+          <label for="smartzoneId">SmartzoneId</label>
+          <input type="number" id="smartzoneId" />
+        </div>
+        <div>
+          <label for="name">Naam</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="town">Stad</label>
+          <input type="text" id="town" />
+        </div>
+        <div>
+          <label for="location">Locatie</label>
+          <input type="text" id="location" />
+        </div>
+        <div>
+          <label for="function">Functie</label>
+          <input type="text" id="function" />
+        </div>
+        <div>
+          <label for="time">Tijdstip</label>
+          <input type="text" id="time" />
+        </div>
+        <div>
+          <label for="size">Grootte (plek)</label>
+          <input type="text" id="size" />
+        </div>
+        <div>
+          <label for="utilization">Gebruik (%)</label>
+          <input type="text" id="utilization" />
+        </div>
+        <div>
+          <label for="description">Omschrijving</label>
+          <input type="text" id="description" />
+        </div>
+        <div>
+          <label for="image">Foto (url)</label>
+          <input type="text" placeholder="https://foto.com" id="image" />
+        </div>
+        <div class="form-buttons">
+          <button type="submit">Verstuur</button>
+          <button type="reset">Annuleren</button>
+        </div>
+      </form>
+
+      <!-- <form
+        id="smartzonePutForm"
+        action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
+        method="post"
+      >
+        <img class="close-button-put" src="assets/svgs/close.svg" alt="" />
+        <h2 class="style-h3">Smartzone bewerken</h2>
+        <div>
+          <label for="smartzoneId">SmartzoneId</label>
+          <input type="number" id="smartzoneId" />
+        </div>
+        <div>
+          <label for="name">Naam</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="town">Stad</label>
+          <input type="text" id="town" />
+        </div>
+        <div>
+          <label for="location">Locatie</label>
+          <input type="text" id="location" />
+        </div>
+        <div>
+          <label for="function">Functie</label>
+          <input type="text" id="function" />
+        </div>
+        <div>
+          <label for="time">Tijdstip</label>
+          <input type="text" id="time" />
+        </div>
+        <div>
+          <label for="size">Grootte (plek)</label>
+          <input type="text" id="size" />
+        </div>
+        <div>
+          <label for="utilization">Gebruik (%)</label>
+          <input type="text" id="utilization" />
+        </div>
+        <div>
+          <label for="description">Omschrijving</label>
+          <input type="text" id="description" />
+        </div>
+        <div>
+          <label for="image">Foto (url)</label>
+          <input type="text" placeholder="https://foto.com" id="image" />
+        </div>
+        <div class="form-buttons">
+          <button type="submit">Bewerken</button>
+          <button type="reset">Annuleren</button>
+        </div>
+      </form> -->
+      
+      <form
+        id="smartzoneDeleteForm"
+        action="https://codingthecurbs.api.fdnd.nl/v1/smartzone"
+        method="post"
+      >
+        <img class="close-button-delete" src="assets/svgs/close.svg" alt="" />
+        <h2 class="style-h3">Smartzone verwijderen</h2>
+        <div>
+          <label for="smartzoneId">SmartzoneId</label>
+          <input type="number" id="smartzoneId" />
+        </div>
+        <div>
+          <label for="name">Naam</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="town">Stad</label>
+          <input type="text" id="town" />
+        </div>
+        <div>
+          <label for="location">Locatie</label>
+          <input type="text" id="location" />
+        </div>
+        <div>
+          <label for="function">Functie</label>
+          <input type="text" id="function" />
+        </div>
+        <div>
+          <label for="time">Tijdstip</label>
+          <input type="text" id="time" />
+        </div>
+        <div>
+          <label for="size">Grootte (plek)</label>
+          <input type="text" id="size" />
+        </div>
+        <div>
+          <label for="utilization">Gebruik (%)</label>
+          <input type="text" id="utilization" />
+        </div>
+        <div>
+          <label for="description">Omschrijving</label>
+          <input type="text" id="description" />
+        </div>
+        <div>
+          <label for="image">Foto (url)</label>
+          <input type="text" placeholder="https://foto.com" id="image" />
+        </div>
+        <div class="form-buttons">
+          <button type="submit">
+            Verwijderen
+          </button>
+          <button type="reset">Annuleren</button>
+        </div>
+      </form>
+      <article class="smartzone-buttons">
+        <button class="toggle-form-post">
+          Smartzone toevoegen
+        </button>
+        <button class="toggle-form-put">
+          Smartzone bewerken
+        </button>
+        <button class="toggle-form-delete">
+          Smartzone verwijderen
+        </button>
+        <button class="toggle-all-smartzones">
+          Alle smartzones
+        </button>
+      </article>
+      <article class="sorting"></article>
+      <article class="loading-state">
+      </article>
+      <section class="empty-state">
+        <img src="assets/svgs/sad.svg" alt="Afbeelding empty state">
+        <h2>Er is nog niets geladen...</h2>
+        <p>Zet JavaScript aan en laad de website opnieuw.</p>
+        <div class="empty-state-grid">
+          <table class="empty-state-table">
+            <th>Tabel</th>
+          </table>
+          <img class="empty-state-image" alt="Afbeelding voor tabel"></img>
+        </div>
+      </section>
+      <section class="tables"></section>
     </main>
-    <script src="scripts/api.js"></script>
-    <script src="scripts/render.js"></script>
+    <script src="scripts/API.js"></script>
+    <script src="scripts/Render.js"></script>
+    <script src="scripts/States.js"></script>
   </body>
 </html>

@@ -24,8 +24,8 @@ function renderSmartzones(data) {
     <option>Sorteer op functie</option>
     <option>Deelmobiliteit</option>
     <option>Laden en lossen</option>
-    <option value="Laden en lossen Parkeren Deelmobiliteit">Deelmobiliteit</option>
-    <option value="Laden en lossen Recreatie">Recreatie</option>
+    <option>Laden en lossen Parkeren Deelmobiliteit</option>
+    <option>Laden en lossen Recreatie</option>
     </select>
 
     <select class="select-town" onchange = "filterSmartzones(this.value)">
@@ -177,7 +177,7 @@ async function filterSmartzones(value) {
   smartzoneTables.innerHTML = output
 }
 
-const filterAllSmartzones = document.querySelector('.smartzones-button')
+const filterAllSmartzones = document.querySelector('.toggle-all-smartzones')
 
 filterAllSmartzones.addEventListener('click', async () => {
   const res = await fetch(api_base)

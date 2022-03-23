@@ -27,16 +27,44 @@
         />
       </a>
       <nav>
+        <div class="hamburger-flex">
+          <svg id="hamburger" viewBox="0 0 100 80" width="40" height="40">
+            <rect rx="10"></rect>
+            <rect y="30" rx="10"></rect>
+            <rect y="60" rx="10"></rect>
+          </svg>
+          <label class="hamburger-label" for="hamburger"> Menu </label>
+        </div>
+        <img class="close-button" src="assets/svgs/close-blue.svg" alt="" />
         <ul class="primary-navigation">
           <li>
-            <a href="#smartzones"> Smartzones </a>
+            <a href="index.html#use-cases">Use-cases</a>
           </li>
+          <li>
+            <a class="active" href="#smartzones">Smart zones</a>
+          </li>
+          <li>
+            <a href="index.html#product">Product</a>
+          </li>
+          <li>
+            <a href="index.html#services">Services</a>
+          </li>
+          <li>
+            <a href="index.html#updates">Updates</a>
+          </li>
+          <li>
+            <a href="index.html#about">Over ons</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+          <button>Sluit je aan</button>
         </ul>
       </nav>
     </header>
     <main>
       <section id="smartzones">
-        <h1 class="style-h2">Smartzones</h1>
+        <h1 class="style-h2">Smart Zones</h1>
         <p>
           Hier is een overzicht met smartzones. Je kan ook smartzones sorteren
           op naam, functie, stad en locatie.
@@ -48,11 +76,7 @@
         method="post"
       >
         <img class="close-button-post" src="assets/svgs/close.svg" alt="" />
-        <h2 class="style-h3">Smartzone toevoegen</h2>
-        <div>
-          <label for="smartzoneId">SmartzoneId</label>
-          <input type="number" id="smartzoneId" />
-        </div>
+        <h2 class="style-h3">Smart zone toevoegen</h2>
         <div>
           <label for="name">Naam</label>
           <input type="text" id="name" />
@@ -101,7 +125,7 @@
         method="post"
       >
         <img class="close-button-put" src="assets/svgs/close.svg" alt="" />
-        <h2 class="style-h3">Smartzone bewerken</h2>
+        <h2 class="style-h3">Smart zone bewerken</h2>
         <div>
           <label for="smartzoneId">SmartzoneId</label>
           <input type="number" id="smartzoneId" />
@@ -154,7 +178,7 @@
         method="post"
       >
         <img class="close-button-delete" src="assets/svgs/close.svg" alt="" />
-        <h2 class="style-h3">Smartzone verwijderen</h2>
+        <h2 class="style-h3">Smart zone verwijderen</h2>
         <div>
           <label for="smartzoneId">SmartzoneId</label>
           <input type="number" id="smartzoneId" />
@@ -201,10 +225,10 @@
         </div>
       </form>
       <article class="smartzone-buttons">
-        <button class="toggle-form-post">Smartzone toevoegen</button>
-        <button class="toggle-form-put">Smartzone bewerken</button>
-        <button class="toggle-form-delete">Smartzone verwijderen</button>
-        <button class="toggle-all-smartzones">Alle smartzones</button>
+        <button class="toggle-form-post">Smart zone toevoegen</button>
+        <button class="toggle-form-put">Smart zone bewerken</button>
+        <button class="toggle-form-delete">Smart zone verwijderen</button>
+        <button class="toggle-all-smartzones">Alle smart zones</button>
       </article>
       <article class="sorting"></article>
       <section class="empty-state">
@@ -218,5 +242,6 @@
     <script src="scripts/api.js"></script>
     <script src="scripts/render.js"></script>
     <script src="scripts/states.js"></script>
+    <script src="scripts/hamburger.js"></script>
   </body>
 </html>

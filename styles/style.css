@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  padding: 16em 1em 5em 1em;
+  padding: 22em 1em 5em 1em;
 }
 
 h1,
@@ -110,18 +110,69 @@ header {
 header {
   padding-bottom: 1.5em;
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   z-index: 1;
 }
 
 .logo {
-  position: relative;
+  position: absolute;
   display: block;
-  margin: 2em auto;
+  margin-top: 2em;
+  margin-left: 2em;
+  width: auto;
   height: 2.8em;
+}
+
+.hamburger-flex {
+  margin: 2.5em 0 1em 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+label.hamburger-label {
+  margin-right: 6.5em;
+  font-weight: 700;
+  display: block;
+  margin-top: 3.2em;
+}
+
+#hamburger {
+  margin-right: 6em;
+  position: absolute;
+  fill: var(--blue);
+  width: 3.2rem;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+}
+
+#hamburger > rect {
+  width: 100px;
+  height: 20px;
+}
+
+.menu-close {
+  display: none;
+}
+
+.close-button-dissapear {
+  opacity: 0;
+}
+
+.close-button {
+  position: absolute;
+  width: 3.3em;
+  background-color: var(--white);
+  margin-top: -5.8em;
+  margin-left: 21em;
+  z-index: 2;
+  cursor: pointer;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 }
 
 a {
@@ -131,6 +182,10 @@ a {
 }
 
 a:hover {
+  color: var(--blue);
+}
+
+.active {
   color: var(--blue);
 }
 
@@ -314,30 +369,6 @@ li {
   cursor: pointer;
 }
 
-.st0 {
-  filter: url(#Adobe_OpacityMaskFilter);
-}
-.st1 {
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  fill: #ffffff;
-}
-.st2 {
-  mask: url(#mask-2_1_);
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  fill: #4f52c9;
-}
-.st3 {
-  filter: url(#Adobe_OpacityMaskFilter_1_);
-}
-.st4 {
-  mask: url(#mask-4_1_);
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  fill: #4f52c9;
-}
-
 .loading-state {
   display: flex;
   align-items: center;
@@ -458,7 +489,7 @@ button[type='submit'] {
 
 @media (min-width: 70em) {
   main {
-    padding: 5em 0;
+    padding: 7em 0;
   }
 
   p {
@@ -495,6 +526,35 @@ button[type='submit'] {
   .primary-navigation {
     display: flex;
     flex-wrap: nowrap;
+  }
+
+  .hamburger-grid {
+    display: block;
+  }
+
+  label.hamburger-label {
+    display: none;
+  }
+
+  .logo {
+    position: relative;
+  }
+
+  .hamburger-flex {
+    margin: 0;
+  }
+
+  #hamburger {
+    position: relative;
+    display: none;
+  }
+
+  .hamburger-label {
+    display: none;
+  }
+
+  .close-button {
+    display: none;
   }
 
   button {

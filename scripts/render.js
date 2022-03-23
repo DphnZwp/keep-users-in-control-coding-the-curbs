@@ -1,7 +1,7 @@
 // Variables
-const api_base = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const select = document.querySelector('.sorting')
 const smartzoneTables = document.querySelector('.tables')
+const filterAllSmartzones = document.querySelector('.toggle-all-smartzones')
 
 getSmartzones()
 renderSmartzones()
@@ -142,8 +142,6 @@ async function filterSmartzones(value) {
     })
   smartzoneTables.innerHTML = output
 }
-
-const filterAllSmartzones = document.querySelector('.toggle-all-smartzones')
 
 filterAllSmartzones.addEventListener('click', async () => {
   const smartzones = await getSmartzones()

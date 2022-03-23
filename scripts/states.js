@@ -8,4 +8,5 @@ loader.innerHTML += `
 // Empty state
 const emptyState = document.querySelector('.empty-state')
 emptyState.classList.add('empty-state-dissapear')
+
 // Error state

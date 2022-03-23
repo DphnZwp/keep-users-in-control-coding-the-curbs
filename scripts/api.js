@@ -6,8 +6,8 @@ const toggleButtonDelete = document.querySelector('.toggle-form-delete')
 const closeButtonPost = document.querySelector('.close-button-post')
 const closeButtonPut = document.querySelector('.close-button-put')
 const closeButtonDelete = document.querySelector('.close-button-delete')
-// Post variables
-const apiUrl = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
+// Api variables
+const apiBase = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const smartzonePostForm = document.querySelector('form#smartzonePostForm')
 const smartzonePutForm = document.querySelector('form#smartzonePutForm')
 const smartzoneDeleteForm = document.querySelector('form#smartzoneDeleteForm')
@@ -38,7 +38,7 @@ closeButtonDelete.addEventListener('click', () => {
 })
 
 async function getSmartzones() {
-  const response = await fetch(api_base)
+  const response = await fetch(apiBase)
   const data = await response.json()
   return data.data
 }
@@ -59,7 +59,7 @@ smartzonePostForm.addEventListener('submit', (post) => {
     image: document.querySelector('#image').value,
   }
 
-  fetch(apiUrl, {
+  fetch(apiBase, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ smartzonePutForm.addEventListener('submit', (post) => {
     image: document.querySelector('#smartzonePutForm #image').value,
   }
 
-  fetch(apiUrl, {
+  fetch(apiBase, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ smartzoneDeleteForm.addEventListener('submit', (post) => {
     image: document.querySelector('#smartzoneDeleteForm #image').value,
   }
 
-  fetch(apiUrl, {
+  fetch(apiBase, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',

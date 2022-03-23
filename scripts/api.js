@@ -2,6 +2,7 @@
 const toggleButtonPost = document.querySelector('.toggle-form-post')
 const toggleButtonPut = document.querySelector('.toggle-form-put')
 const toggleButtonDelete = document.querySelector('.toggle-form-delete')
+// Close button variables
 const closeButtonPost = document.querySelector('.close-button-post')
 const closeButtonPut = document.querySelector('.close-button-put')
 const closeButtonDelete = document.querySelector('.close-button-delete')
@@ -35,6 +36,12 @@ closeButtonPut.addEventListener('click', () => {
 closeButtonDelete.addEventListener('click', () => {
   smartzoneDeleteForm.classList.remove('form-show')
 })
+
+async function getSmartzones() {
+  const response = await fetch(api_base)
+  const data = await response.json()
+  return data.data
+}
 
 smartzonePostForm.addEventListener('submit', (post) => {
   post.preventDefault()

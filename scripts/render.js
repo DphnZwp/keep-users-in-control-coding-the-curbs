@@ -6,12 +6,6 @@ const smartzoneTables = document.querySelector('.tables')
 getSmartzones()
 renderSmartzones()
 
-async function getSmartzones() {
-  const response = await fetch(api_base)
-  const data = await response.json()
-  return data.data
-}
-
 async function renderSmartzones() {
   const smartzones = await getSmartzones()
   // Selects and button for filtering
@@ -47,6 +41,7 @@ async function renderSmartzones() {
     <option>Witte de Withstraat 32</option>
     </select>
     `
+  loader.className += ' hidden'
   smartzones
     .filter((smartzone) => {
       return smartzone.town === 'Utrecht'

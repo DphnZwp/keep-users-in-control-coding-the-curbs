@@ -369,18 +369,12 @@ table {
   background-color: white;
 }
 
-.empty-state-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.empty-state {
+  display: block;
 }
 
-.empty-state-table {
-  margin: 1.5em 0 1.5em 5em;
-  display: block;
-  height: 27em;
-  width: 80%;
-  border: 2.5px solid black;
-  background-color: white;
+.empty-state-dissapear {
+  display: none;
 }
 
 .empty-state > img {

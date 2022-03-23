@@ -13,9 +13,7 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Het doel is om dynamische data van de Coding the Curbs REST API te vertalen naar een vorm die bruikbaar en inzichtelijk is op een webpagina. Om dit te bereiken heb ik de data van de api in tabellen gedaan en de foto's van de api er naast de tabellen gezet. Dit doe ik door data te fetchen en te renderen met async await. Verder kan je smartzones sorteren op naam, functie, stad en locatie. Als je een beheerder bent kan je ook smartzones toevoegen, bewerken en verwijderen met drie verschillende formulieren.
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->

@@ -41,7 +41,7 @@ async function renderSmartzones() {
     <option>Witte de Withstraat 32</option>
     </select>
     `
-  loader.className += ' hidden'
+  loading.classList.add('hidden')
   smartzones
     .filter((smartzone) => {
       return smartzone.town === 'Utrecht'

@@ -13,6 +13,8 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
+[🌐 https://daphnecodingthecurbs.student.fdnd.nl](https://daphnecodingthecurbs.student.fdnd.nl/)
+
 Het doel is om dynamische data van de Coding the Curbs REST API te vertalen naar een vorm die bruikbaar en inzichtelijk is op een webpagina. Om dit te bereiken heb ik de data van de api in tabellen gedaan en de foto's van de api er naast de tabellen gezet. Dit doe ik door data te fetchen en te renderen met async await. Verder kan je smartzones sorteren op naam, functie, stad en locatie. Als je een beheerder bent kan je ook smartzones toevoegen, bewerken en verwijderen met drie verschillende formulieren.
 
 ## Kenmerken

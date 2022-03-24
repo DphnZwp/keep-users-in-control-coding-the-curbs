@@ -97,17 +97,6 @@ smartzoneDeleteForm.addEventListener('submit', (post) => {
   let data = {
     smartzoneId: document.querySelector('#smartzoneDeleteForm #smartzoneId')
       .value,
-    name: document.querySelector('#smartzoneDeleteForm #name').value,
-    town: document.querySelector('#smartzoneDeleteForm #town').value,
-    location: document.querySelector('#smartzoneDeleteForm #location').value,
-    function: document.querySelector('#smartzoneDeleteForm #function').value,
-    time: document.querySelector('#smartzoneDeleteForm #time').value,
-    size: document.querySelector('#smartzoneDeleteForm #size').value,
-    utilization: document.querySelector('#smartzoneDeleteForm #utilization')
-      .value,
-    description: document.querySelector('#smartzoneDeleteForm #description')
-      .value,
-    image: document.querySelector('#smartzoneDeleteForm #image').value,
   }
 
   fetch(apiBase, {

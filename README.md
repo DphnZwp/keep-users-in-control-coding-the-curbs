@@ -47,7 +47,7 @@ cd https://github.com/DphnZwp/keep-users-in-control-coding-the-curbs.git
 
 ```
 git@github.com:DphnZwp/the-startup-coding-the-curbs.git
-cd 
+cd keep-users-in-control-coding-the-curbs
 
 ```
 

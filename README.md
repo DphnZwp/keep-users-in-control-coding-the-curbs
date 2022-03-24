@@ -1,8 +1,8 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # 🚐 Smart Zones pagina van Coding the Curbs
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
 ![screencapture-daphnecodingthecurbssmartzones-student-fdnd-nl-2022-03-24-11_40_07](https://user-images.githubusercontent.com/69635977/159898897-7fa3053b-cbd8-4357-9d51-26502a8c0f13.png)
+Bouw de Smart Zones pagina van de Coding the Curbs website waarbij de focus ligt op het ophalen en verzenden van de Smart Zones content (data) uit en naar de Coding the Curbs REST API.
 
 ## Inhoudsopgave
 
